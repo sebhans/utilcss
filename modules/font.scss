@@ -24,6 +24,17 @@
       }
     }
   }
+  @if ($config-font-size-sm) {
+    @media (min-width: 100px) and (max-width: $device-sm) {
+      &-size-sm {
+        @each $value, $size in $font-sizes-sm {
+          &--#{$value} {
+            font-size: #{$size}
+          }
+        }
+      }
+    }
+  }
   @if ($config-font-style) {
     @each $style in $font-styles {
       &-style--#{$style} {
